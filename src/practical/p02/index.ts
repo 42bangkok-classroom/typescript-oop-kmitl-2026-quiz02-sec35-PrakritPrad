@@ -1,5 +1,4 @@
 import axios from "axios"
-import { title } from "node:process";
 
 interface Post {
   userId: number;
