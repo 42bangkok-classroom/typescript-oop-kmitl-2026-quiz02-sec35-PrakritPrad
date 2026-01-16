@@ -8,7 +8,7 @@ interface Post {
   body: string;
 }
 
-async function getEdgePosts(): Promise<{id: number, title: string}[]> {
+export async function getEdgePosts(): Promise<{id: number, title: string}[]> {
   try {
 
     const res = await axios.get<Post[]>(
@@ -27,9 +27,3 @@ async function getEdgePosts(): Promise<{id: number, title: string}[]> {
   }
 }
 
-async function main() {
-  const respone = getEdgePosts();
-  console.log(respone);
-}
-
-main();
