@@ -7,7 +7,7 @@ interface Post {
   body: string;
 }
 
-export async function getEdgePosts(userId: number): Promise<{ id: number, title: string }[]> {
+export async function getPostsByUser(userId: number): Promise<{ id: number, title: string }[]> {
   try {
 
     const res = await axios.get<Post[]>(
