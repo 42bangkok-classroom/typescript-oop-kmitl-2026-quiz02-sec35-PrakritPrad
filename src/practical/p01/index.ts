@@ -8,7 +8,7 @@ interface Post {
   body: string;
 }
 
-export async function getEdgePosts() {
+async function getEdgePosts(): Promise<{id: number, title: string}[]> {
   try {
 
     const res = await axios.get<Post[]>(
